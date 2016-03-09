@@ -5,4 +5,4 @@ if [ ! -f ${CATALINA_HOME}/bin/.tomcat_admin_created ]; then
 fi
 
 echo "Calling the tomcat startup script..."
-exec /bin/su tomcat ${CATALINA_HOME}/bin/catalina.sh run 2>&1
+exec /sbin/setuser tomcat ${CATALINA_HOME}/bin/catalina.sh run 2>&1
